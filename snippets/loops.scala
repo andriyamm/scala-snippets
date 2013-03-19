@@ -65,7 +65,7 @@ breakable {
 
 /**
  * You can have multiple generators of the form variable <- expression. Separate them
- * by semicolons. For example,
+ * by semicolons.
  */
 for (i <- 1 to 3; j <- 1 to 3) print((10 * i + j) + " ")
   // Prints 11 12 13 21 22 23 31 32 33
