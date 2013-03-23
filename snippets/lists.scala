@@ -60,3 +60,27 @@ println( "Check if nums is empty : " + nums.isEmpty )
   def insert(x: Int, xs: List[Int]): List[Int] = 
     if (xs.isEmpty || x <= xs.head) x :: xs
     else xs.head :: insert(x, xs.tail)
+
+
+/**
+ * Concatenating Lists
+ */
+val fruit1 = "apples" :: ("oranges" :: ("pears" :: Nil))
+val fruit2 = "mangoes" :: ("banana" :: Nil)
+
+var fruit = fruit1 ::: fruit2
+
+/**
+ * List.fill() method creates a list consisting of zero or more copies of the same element
+ */
+  val fruit = List.fill(3)("apples")
+
+  /**
+   * You can use a function along with List.tabulate() method to apply on all the elements 
+   of the list before tabulating the list. Its arguments are just like those of List.fill: 
+   the first argument list gives the dimensions of the list to create, and the second 
+   describes the elements of the list. The only difference is that instead of the elements 
+   being fixed, they are computed from a function:
+   */
+    // Creates 5 elements using the given function.
+      val squares = List.tabulate(6)(n => n * n)
